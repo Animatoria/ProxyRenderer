@@ -2,7 +2,6 @@ var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 
 var xhr = new XHR();
 
-// (2) запрос на другой домен :)
 xhr.open('GET', 'https://proxyfordevelopers.com/api/proxies/?format=json', true);
 
 xhr.onload = function() {
