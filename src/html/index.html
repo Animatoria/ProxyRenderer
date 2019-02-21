@@ -5,11 +5,31 @@
   <title>ProxyRenderer</title>
   <link rel='shortcut icon' href='icons/favicon.ico'>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css %>">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
-  <div>Some text</div>
+  <div id="landing" class="row" style="font-size: 20px">
+    <div class="col-3" style="border-right: 1px solid black">
+      <div class="col-6" style="margin: 20px">Country:
+        <select v-model="country" @change="proxyDetails = {}">
+          <option v-for="country in countries" v-html="country">
+          </option>
+        </select>
+      </div>
+      <ul><p class="row" style="border-bottom: 1px solid black"><span class="col-2">Id</span><span class="col-10">Type</span></p>
+        <li v-for="proxy in aliveProxy" :key="proxy.id" @click="showDetails(proxy.id)" :class="{red:proxy.id === proxyDetails.id}" style="cursor: pointer">
+            <p class="row"><span v-html="proxy.id" class="col-2"></span><span v-html="proxyType[proxy.proxy_type]" class="col-10"></span></p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-9">
+      <div v-for="(value, key) in proxyDetails">
+        <p class="row"><span v-html="key" class="col-2"></span><span v-html="value" class="col-10"></span></p>
+      </div>
+    </div>
+  </div>
   <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
 </body>
 
