@@ -1,0 +1,43 @@
+{
+  "name": "proxyrenderer",
+  "version": "1.0.0",
+  "description": "test subject",
+  "main": "index.html",
+  "scripts": {
+    "dev": "webpack --mode development --watch ",
+    "build": "webpack --mode production",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Animatoria/ProxyRenderer.git"
+  },
+  "author": "Remizov Artem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Animatoria/ProxyRenderer/issues"
+  },
+  "homepage": "https://github.com/Animatoria/ProxyRenderer#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "autoprefixer": "^9.4.8",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^1.0.1",
+    "css-loader": "^2.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-md5-hash": "0.0.6"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

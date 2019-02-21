@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <title>ProxyRenderer</title>
   <link rel='shortcut icon' href='icons/favicon.ico'>
-  <link rel='stylesheet' href='style.css' type='text/css'>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css %>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
   <div>Some text</div>
-  <script src='main.js'></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
 </body>
 
 </html>

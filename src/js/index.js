@@ -1,3 +1,5 @@
+import './../scss/index.scss';
+
 var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 
 var xhr = new XHR();
